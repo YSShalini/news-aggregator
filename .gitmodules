@@ -1,3 +1,0 @@
-[submodule "backend"]
-    path = backend
-    url = https://github.com/YSShalini/news-aggregator-app/backend
