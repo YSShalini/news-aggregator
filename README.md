@@ -1,1 +1,1 @@
- news-aggregator-app
+news-aggregator-app
