@@ -1,97 +1,114 @@
-/* Homepage.css */
+/* Homepage Container */
 .homepage-container {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+    transition: background-color 0.3s, color 0.3s;
 }
 
+/* Header */
 .header {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 3.5rem;
-    font-family:Poor Richard;
+    font-family: 'Playfair Display', serif;
+    color: #333333;
 }
 
+/* Navbar */
 .navbar {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .nav-link {
-    padding: 10px 15px;
+    padding: 10px 20px;
     background-color: #ffffff;
-    border: none;
+    border: 2px solid #007bff;
+    color: #007bff;
+    font-size: 1.1rem;
+    border-radius: 8px;
     cursor: pointer;
-    font-size: 1rem;
-    border-radius: 5px;
-    transition: background-color 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .nav-link.active {
     background-color: #007bff;
-    color: #fff;
+    color: #ffffff;
 }
 
 .nav-link:hover {
     background-color: #e0e0e0;
+    border-color: #0056b3;
 }
 
+/* News Grid */
 .news-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    gap: 30px;
 }
 
+/* News Article */
 .news-article {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .news-article:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
+/* Article Image */
 .article-image {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
 }
 
 .placeholder-image {
-    width: 100%;
-    height: 200px;
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
+    height: 200px;
     background-color: #ccc;
-    border-radius: 10px;
+    border-radius: 12px;
     font-size: 1.2rem;
     color: #fff;
 }
 
+/* Article Text */
 .article-title {
-    font-size: 1.5rem;
-    margin: 15px 0 10px;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 20px 0 10px;
+    color: #333333;
 }
 
 .article-description {
-    font-size: 1rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555555;
     margin-bottom: 15px;
 }
 
+/* Read More Button */
 .read-more {
     display: inline-block;
-    padding: 10px 15px;
+    padding: 10px 20px;
     background-color: #007bff;
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
     border-radius: 5px;
+    font-weight: 500;
     transition: background-color 0.3s ease;
 }
 
@@ -99,144 +116,142 @@
     background-color: #0056b3;
 }
 
+/* Loading and Error Text */
 .loading, .error {
     text-align: center;
     font-size: 1.2rem;
-    color: red;
-}
-
-.homepage-container {
-    padding: 20px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Dark Mode Styles */
-body.dark-mode {
-    background-color: #121212; /* Dark background color */
-    color: #ffffff; /* Light text color */
-}
-
-.header {
-    color: #000000; /* Light color for header text in dark mode */
-}
-
-/* Styles for the navbar and other containers */
-.navbar, .search-form, .source-dropdown-container, .news-grid {
-    background-color: #1e1e1e; /* Darker background for containers */
-    border: 1px solid #444; /* Dark border */
-}
-
-.nav-link, .search-form input, .source-dropdown {
-    background-color: #333; /* Dark background for buttons and inputs */
-    color: #ffffff; /* Light text color for buttons and inputs */
-}
-
-.nav-link.active {
-    background-color: #555; /* Active link background */
-}
-
-.loading, .error {
-    color: #ffcc00; /* Warning text color */
-}
-
-.news-article {
-    background-color: #222; /* Dark background for articles */
-    color: #ffffff; /* Light text color for articles */
-}
-.homepage-container {
-    position: relative; /* Ensure positioning is relative for child elements */
+    color: #ff3333;
 }
 
 .profile-dropdown {
-    position: absolute; /* Position the dropdown absolutely */
-    top: 20px; /* Adjust this value as needed for vertical positioning */
-    right: 20px; /* Aligns the icon to the right */
+    position: absolute;
+    top: 20px; /* Adjust as needed for vertical positioning */
+    right: 10px; /* Increase this value to move the icon further to the right */
 }
 
 .user-icon {
     cursor: pointer;
-    font-size: 40px; /* Icon size */
-    color: inherit; /* Inherit text color */
+    font-size: 40px;
+    color: inherit;
 }
+
 
 .dropdown-menu {
     position: absolute;
-    top: 50px; /* Adjust this value to position the dropdown below the icon */
-    right: 0; /* Align the dropdown to the right */
-    background-color: white; /* Adjust background color as needed */
-    border: 1px solid #ccc; /* Add border for clarity */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
-    z-index: 1000; /* Ensure it appears above other elements */
-    padding: 10px; /* Add padding for dropdown items */
+    top: 50px;
+    right: 0;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 10px;
 }
 
 .dropdown-menu button {
-    display: block; /* Stack dropdown items */
-    width: 100%; /* Full width for buttons */
-    text-align: left; /* Align text to the left */
-    padding: 8px; /* Padding for buttons */
-    background: none; /* Reset button background */
-    border: none; /* Reset button border */
-    cursor: pointer; /* Pointer cursor */
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 10px;
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
 }
 
 .dropdown-menu button:hover {
-    background-color: #f0f0f0; /* Highlight on hover */
+    background-color: #f0f0f0;
 }
 
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
 
-/* Dark Mode Styles for Dropdown */
+body.dark-mode .header {
+    color: #ffffff;
+}
+
+body.dark-mode .navbar, .search-form, .source-dropdown-container, .news-grid {
+    background-color: #1e1e1e;
+}
+
+body.dark-mode .nav-link {
+    background-color: #333;
+    color: #ffffff;
+    border: 2px solid #555;
+}
+
+body.dark-mode .nav-link.active {
+    background-color: #555;
+}
+
+body.dark-mode .loading, .error {
+    color: #ffcc00;
+}
+
 body.dark-mode .dropdown-menu {
-    background-color: #333; /* Dark background */
+    background-color: #333;
 }
 
 body.dark-mode .dropdown-menu button {
-    color: #fff; /* Light text color */
+    color: #ffffff;
 }
 
 body.dark-mode .dropdown-menu button:hover {
-    background-color: #444; /* Dark hover effect */
+    background-color: #444;
 }
 
-.language-selector {
-    margin: 20px 0; /* Add some margin for spacing */
-}
-
-.language-selector label {
-    margin-right: 10px; /* Space between label and dropdown */
-}
-
-.language-selector select {
-    padding: 5px; /* Add padding for better appearance */
-}
-
-/* Other styles... */
-
-/* Weather Section Styles */
+/* Weather Section */
 .weather-section {
-    background-color: #f0f8ff; 
-    border-radius: 8px; 
-    padding: 20px; 
-    margin: 20px 0; 
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-    text-align: center; 
-    width:30%;
+    background-color: #e3f2fd;
+    border-radius: 15px;
+    padding: 25px;
+    margin: 25px 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
 }
 
 .weather-section h2 {
-    font-size: 24px; 
-    color: #333; 
-    margin-bottom: 10px; 
+    font-size: 24px;
+    color: #007bff;
+    margin-bottom: 15px;
 }
 
 .weather-section p {
-    font-size: 18px; 
-    color: #555; 
-    margin: 5px 0; 
+    font-size: 18px;
+    color: #555;
+    margin: 8px 0;
 }
 
 .weather-section p:last-child {
-    font-weight: bold; 
+    font-weight: bold;
 }
 
-/* Other styles... */
+/* Language Selector */
+.language-selector {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+}
+
+.language-selector label {
+    margin-right: 10px;
+    font-size: 1rem;
+    color: #555;
+}
+
+.language-selector select {
+    padding: 8px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    transition: border-color 0.3s ease;
+}
+
+.language-selector select:hover,
+.language-selector select:focus {
+    border-color: #007bff;
+}
