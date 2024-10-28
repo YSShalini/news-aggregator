@@ -36,3 +36,12 @@
 .signin-container button:hover {
   background-color: #0056b3; /* Darker color on hover */
 }
+/* Common image styles for both Signin and Signup */
+.signin-image, .signup-image {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Match the container's rounded corners */
+  margin-bottom: 20px; /* Space below the image */
+}
+
+/* Add any additional styles for the container, form, etc. as needed */

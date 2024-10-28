@@ -1,38 +1,99 @@
+/* Signup.css */
+
+/* Signup Container Styles */
 .signup-container {
-  max-width: 400px;
-  margin: 0 auto; /* Center the form */
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px; /* Rounded corners */
-  background-color: #f9f9f9; /* Light background color */
+    max-width: 400px; /* Set maximum width for the container */
+    margin: 0 auto; /* Center the form */
+    padding: 30px; /* Increased padding for better spacing */
+    border: 1px solid #ddd; /* Light gray border */
+    border-radius: 10px; /* Rounded corners */
+    background-color: #ffffff; /* White background for better contrast */
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    transition: transform 0.3s ease; /* Transition for scaling effect */
 }
 
+.signup-container:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+/* Title Styles */
 .signup-container h2 {
-  text-align: center; /* Center title */
+    text-align: center; /* Center title */
+    color: #007bff; /* Primary color for the title */
+    font-size: 2rem; /* Larger font size */
+    margin-bottom: 20px; /* Space below the title */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 1px; /* Spacing between letters */
 }
 
+/* Form Styles */
 .signup-container form {
-  display: flex;
-  flex-direction: column; /* Stack form elements */
+    display: flex; /* Flexbox for layout */
+    flex-direction: column; /* Stack form elements */
 }
 
+/* Input Styles */
 .signup-container input {
-  margin: 10px 0; /* Margin for spacing */
-  padding: 10px;
-  border: 1px solid #ccc; /* Border for inputs */
-  border-radius: 5px; /* Rounded corners for inputs */
+    margin: 15px 0; /* Increased margin for better spacing */
+    padding: 12px; /* Increased padding for better touch area */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 1rem; /* Font size for inputs */
+    transition: border 0.3s ease, box-shadow 0.3s ease; /* Transition for focus effect */
 }
 
+/* Input Focus Effect */
+.signup-container input:focus {
+    border: 1px solid #007bff; /* Change border color on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect */
+    outline: none; /* Remove default outline */
+}
+
+/* Button Styles */
 .signup-container button {
-  padding: 10px;
-  background-color: #007bff; /* Button color */
-  color: white; /* Text color */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer on hover */
-  transition: background-color 0.3s; /* Transition for hover effect */
+    padding: 12px; /* Increased padding for better touch area */
+    background-color: #007bff; /* Primary button color */
+    color: white; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer on hover */
+    font-size: 1.1rem; /* Increased font size */
+    font-weight: bold; /* Bold text */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Transition for hover and scale effect */
 }
 
+/* Button Hover Effect */
 .signup-container button:hover {
-  background-color: #0056b3; /* Darker color on hover */
+    background-color: #0056b3; /* Darker color on hover */
+    transform: translateY(-3px); /* Lift effect on hover */
 }
+
+/* Button Active Effect */
+.signup-container button:active {
+    transform: translateY(1px); /* Press down effect */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 480px) {
+    .signup-container {
+        padding: 20px; /* Reduced padding for smaller screens */
+        max-width: 90%; /* Adjust max width */
+    }
+
+    .signup-container h2 {
+        font-size: 1.5rem; /* Adjust title size */
+    }
+
+    .signup-container button {
+        font-size: 1rem; /* Adjust button size */
+    }
+}
+/* Common image styles for both Signin and Signup */
+.signin-image, .signup-image {
+  width: 100%; /* Make the image responsive */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 10px; /* Match the container's rounded corners */
+  margin-bottom: 20px; /* Space below the image */
+}
+
+/* Add any additional styles for the container, form, etc. as needed */

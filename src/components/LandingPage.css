@@ -1,110 +1,145 @@
 /* LandingPage.css */
 
+/* General Body Styles */
+body {
+  font-family: "Roboto", sans-serif; /* Consistent font for the whole app */
+  background-color: #f8f9fa; /* Light gray background for the entire page */
+  margin: 0;
+  padding: 0;
+}
 
+/* Header Styles */
 .header {
-  background-color: #ffffff; /* Light grey background */
-  padding: 20px; /* Spacing around the header */
-  text-align: center; /* Center the text */
-  border-bottom: 2px solid #ddd; /* Bottom border for separation */
+  background: linear-gradient(90deg, #007bff, #00c6ff); /* Gradient background for the header */
+  color: #ffffff; /* White text color */
+  padding: 20px; /* Padding around the header */
+  text-align: center; /* Centered text */
+  border-radius: 0 0 25px 25px; /* Rounded corners at the bottom */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Deeper shadow for depth */
+  position: relative; /* Position for pseudo-elements */
+  overflow: hidden; /* Contain pseudo-elements */
 }
 
 .header h1 {
-  font-size: 3.5rem; /* Large font size for the title */
-  color: #333; /* Darker text color */
+  font-size: 3rem; /* Large font size for the title */
   margin: 0; /* Remove default margin */
-  font-family:Poor Richard;
+  text-transform: uppercase; /* Uppercase letters */
+  letter-spacing: 2px; /* Spacing between letters */
 }
 
-
-.landing-page {
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    background-color: #f4f4f4; /* Light background color for contrast */
-  }
-  
-  .app-header {
-    text-align: center;
-    margin-bottom: 20px;
-  }
-  
-  .navbar {
-    display: flex;
-    justify-content: center; /* Center the navbar items */
-    background-color: #007bff; /* Bootstrap primary color */
-    padding: 10px;
-    border-radius: 5px;
-  }
-  
-  .navbar ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Display items in a row */
-  }
-  
-  .navbar li {
-    margin: 0 15px; /* Spacing between category items */
-    color: white; /* Text color */
-    cursor: pointer; /* Pointer cursor on hover */
-    transition: color 0.3s; /* Smooth transition for color change */
-  }
-  
-  .navbar li:hover {
-    color: #ffcc00; /* Change color on hover */
-  }
-  
-  .news-container {
-    display: grid; /* Grid layout for news items */
-    grid-template-columns: repeat(3, 1fr); /* Fixed 3 columns */
-    gap: 20px; /* Space between news items */
-    padding: 20px; /* Optional: Add padding to the container */
-  }
-  
-  .news-item {
-    background-color: white; /* Background for news items */
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
-  }
-  
-  .news-item:hover {
-    transform: translateY(-5px); /* Lift the item on hover */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
-  }
-  
-  .news-image {
-    width: 100%; /* Responsive image */
-    border-radius: 5px; /* Rounded corners for images */
-  }
-  
-  .news-title {
-    font-size: 18px;
-    margin: 10px 0; /* Margin for spacing */
-  }
-  
-  .news-description {
-    color: #666; /* Description color */
-  }
-  
-
+/* Button Container Styles */
 .buttons {
-  display: flex;
-  justify-content: flex-end; /* Align buttons to the right */
-  margin: 20px; /* Add margin for spacing */
+  display: flex; /* Use flexbox for button alignment */
+  justify-content: center; /* Center buttons */
+  margin: 20px 0; /* Space above and below buttons */
+  position: relative; /* Position for hover effects */
 }
 
+/* Button Styles */
 .auth-button {
-  margin-left: 10px; /* Space between buttons */
-  padding: 10px 15px; /* Padding for buttons */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners */
-  background-color: #007bff; /* Button color */
-  color: white; /* Text color */
-  cursor: pointer; /* Pointer on hover */
-  transition: background-color 0.3s; /* Transition for hover effect */
+  padding: 15px 30px; /* Padding for the buttons */
+  background-color: #28a745; /* Green background color */
+  color: #ffffff; /* White text color */
+  border: none; /* Remove border */
+  border-radius: 30px; /* Pill-shaped button */
+  font-size: 1.2rem; /* Button font size */
+  font-weight: bold; /* Bold text */
+  margin: 0 10px; /* Margin between buttons */
+  transition: background-color 0.4s ease, transform 0.4s ease; /* Smooth transitions */
+  position: relative; /* For pseudo-elements */
+  overflow: hidden; /* To contain pseudo-elements */
+}
+
+.auth-button:before {
+  content: ""; /* Create a pseudo-element */
+  position: absolute; /* Position it absolutely within the button */
+  top: 0; /* Align to top */
+  left: 50%; /* Center it horizontally */
+  width: 300%; /* Cover more area for animation */
+  height: 100%; /* Full height */
+  background: rgba(255, 255, 255, 0.2); /* White overlay */
+  transform: translateX(-50%) translateY(-100%); /* Move it out of view */
+  transition: transform 0.5s ease; /* Transition for animation */
 }
 
 .auth-button:hover {
-  background-color: #0056b3; /* Darker color on hover */
+  background-color: #218838; /* Darker green on hover */
+  transform: translateY(-3px); /* Slight lift on hover */
+}
+
+.auth-button:hover:before {
+  transform: translateX(-50%) translateY(0); /* Bring the overlay into view */
+}
+
+/* News Grid Styles */
+.news-grid {
+  display: grid; /* Grid layout for news articles */
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px; /* Gap between grid items */
+  margin: 20px; /* Margin around the grid */
+}
+
+/* News Card Styles */
+.news-card {
+  background-color: #ffffff; /* White background for news cards */
+  border-radius: 15px; /* Rounded corners */
+  padding: 15px; /* Padding inside cards */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+  position: relative; /* Position for pseudo-elements */
+  overflow: hidden; /* Contain pseudo-elements */
+}
+
+.news-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15); /* Deeper shadow on hover */
+}
+
+.news-card:before {
+  content: ""; /* Create a pseudo-element for a decorative effect */
+  position: absolute; /* Absolute positioning */
+  top: 0; /* Align to top */
+  left: 0; /* Align to left */
+  right: 0; /* Align to right */
+  bottom: 0; /* Align to bottom */
+  background: rgba(0, 123, 255, 0.1); /* Light blue overlay */
+  opacity: 0; /* Start invisible */
+  transition: opacity 0.3s ease; /* Transition for fade-in */
+}
+
+.news-card:hover:before {
+  opacity: 1; /* Fade in on hover */
+}
+
+/* Title and Description Styles */
+.news-title {
+  font-size: 1.5rem; /* Title font size */
+  color: #007bff; /* Primary color for titles */
+  margin-bottom: 10px; /* Space below the title */
+  text-decoration: none; /* No underline for links */
+  transition: color 0.3s ease; /* Smooth transition for color */
+}
+
+.news-title:hover {
+  color: #0056b3; /* Darker blue on hover */
+}
+
+.news-description {
+  font-size: 1rem; /* Description font size */
+  color: #555; /* Subtle color for description */
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .header h1 {
+      font-size: 2.5rem; /* Adjust font size for smaller screens */
+  }
+
+  .auth-button {
+      font-size: 1rem; /* Adjust button size for smaller screens */
+  }
+
+  .news-title {
+      font-size: 1.2rem; /* Adjust title font size for smaller screens */
+  }
 }
