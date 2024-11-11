@@ -1,0 +1,115 @@
+.news-feed {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px; /* Limit the max width of the news feed */
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid layout */
+  gap: 20px; /* Space between items */
+  justify-items: center; /* Center the items */
+}
+
+.news-item {
+  background-color: #fff; /* White background */
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Hide overflow */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Soft shadow */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; /* Smooth hover effects */
+}
+
+.news-item:hover {
+  transform: translateY(-10px); /* Slight lift effect */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+}
+
+.news-link {
+  text-decoration: none; /* Remove default link styling */
+  color: inherit; /* Inherit color from the title */
+  display: block;
+  height: 100%; /* Make the link take full height of the item */
+}
+
+.news-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover; /* Make sure image covers the box without distortion */
+  border-bottom: 2px solid #f0f0f0; /* Subtle border below the image */
+}
+
+.news-title {
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  color: #333;
+  padding: 15px;
+  text-align: center;
+  transition: color 0.3s ease; /* Smooth color change */
+}
+
+.news-title:hover {
+  color: #3498db; /* Change color to blue on hover */
+}
+
+.news-item img {
+  border-radius: 10px 10px 0 0; /* Rounded corners on the top */
+}
+
+/* Responsive Styling for Smaller Screens */
+@media screen and (max-width: 768px) {
+  .news-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Adjust grid layout for smaller screens */
+  }
+
+  .news-title {
+    font-size: 16px; /* Smaller text for mobile devices */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .news-title {
+    font-size: 14px; /* Even smaller text for very small screens */
+    padding: 10px;
+  }
+
+  .news-item {
+    border-radius: 8px; /* Slightly smaller rounded corners */
+  }
+}
+
+/* General button styling */
+button {
+  padding: 10px 15px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right:10px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-2px);
+}
+
+/* Save button */
+.save-btn {
+  background-color: #205db7; /* Green */
+  color: white;
+}
+
+.save-btn:hover {
+  background-color: #467ed8; /* Darker green on hover */
+}
+
+/* Share button */
+.share-btn {
+  background-color: #25D366; /* WhatsApp Green */
+  color: white;
+  margin-left: 10px;
+}
+
+.share-btn:hover {
+  background-color: #128C7E; /* Darker WhatsApp Green on hover */
+}

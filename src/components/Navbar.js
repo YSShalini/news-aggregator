@@ -9,13 +9,13 @@ const Navbar = ({ onCategoryChange }) => {
   return (
     <nav className="navbar">
       <ul className="nav-categories">
-        <li onClick={() => handleCategoryChange('business')}>Business</li>
-        <li onClick={() => handleCategoryChange('entertainment')}>Entertainment</li>
-        <li onClick={() => handleCategoryChange('general')}>General</li>
-        <li onClick={() => handleCategoryChange('health')}>Health</li>
-        <li onClick={() => handleCategoryChange('science')}>Science</li>
-        <li onClick={() => handleCategoryChange('sports')}>Sports</li>
-        <li onClick={() => handleCategoryChange('technology')}>Technology</li>
+        <li onClick={() => handleCategoryChange('business')}>BUSINESS</li>
+        <li onClick={() => handleCategoryChange('entertainment')}>ENTERTAINMENT</li>
+        <li onClick={() => handleCategoryChange('general')}>GENERAL</li>
+        <li onClick={() => handleCategoryChange('health')}>HEALTH</li>
+        <li onClick={() => handleCategoryChange('science')}>SCIENCE</li>
+        <li onClick={() => handleCategoryChange('sports')}>SPORTS</li>
+        <li onClick={() => handleCategoryChange('technology')}>TECHNOLOGY</li>
       </ul>
 
       

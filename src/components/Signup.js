@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './Signup.css';
-import NewsImage from '../assets/news.jpeg'; // Adjust the path as needed
+import NewsImage from '../assets/news.jpeg'; 
 
 const SignUp = () => {
   const [formData, setFormData] = useState({
@@ -23,7 +23,7 @@ const SignUp = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:5000/api/signup', formData);
+      const response = await axios.post('http://localhost:5001/api/signup', formData);
       if (response.status === 201) {
         window.alert('User registered successfully!');
         setFormData({ username: '', email: '', password: '', interest: '', location: '' });
@@ -36,7 +36,7 @@ const SignUp = () => {
 
   return (
     <div className="signup-container">
-      <img src={NewsImage} alt="Sign Up" className="signup-image" /> {/* Add the image */}
+      <img src={NewsImage} alt="Sign Up" className="signup-image" /> 
       <h2>Sign Up</h2>
       <form onSubmit={handleSubmit}>
         <input

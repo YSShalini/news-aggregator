@@ -1,47 +1,148 @@
-.signin-container {
-  max-width: 400px;
-  margin: 0 auto; /* Center the form */
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 10px; /* Rounded corners */
-  background-color: #f9f9f9; /* Light background color */
-}
 
-.signin-container h2 {
-  text-align: center; /* Center title */
-}
-
-.signin-container form {
+.header {
+  background: url('../assets/header.jpg') no-repeat center center; /* Adjust this path */
+  background-size: cover;
+   color: white;
+  text-align: center;
   display: flex;
-  flex-direction: column; /* Stack form elements */
+  justify-content: flex-start;
+  align-items: flex-start;
+ 
 }
 
-.signin-container input {
-  margin: 10px 0; /* Margin for spacing */
-  padding: 10px;
-  border: 1px solid #ccc; /* Border for inputs */
-  border-radius: 5px; /* Rounded corners for inputs */
+.header h1 {
+  font-size: 1.1em;
+  margin:0;
+  line-height: 0.9; /* Reduce line height to bring lines closer */
+ text-align:left;
+ font-family: 'Poor Richard', serif; /* Apply Poor Richard font */
+
 }
 
-.signin-container button {
-  padding: 10px;
-  background-color: #007bff; /* Button color */
-  color: white; /* Text color */
-  border: none; /* Remove border */
-  border-radius: 5px; /* Rounded corners */
-  cursor: pointer; /* Pointer on hover */
-  transition: background-color 0.3s; /* Transition for hover effect */
+.news {
+  display: block;
+  margin-bottom: -50px; /* Adjust as needed to bring lines closer */
+
 }
 
-.signin-container button:hover {
-  background-color: #0056b3; /* Darker color on hover */
-}
-/* Common image styles for both Signin and Signup */
-.signin-image, .signup-image {
-  width: 100%; /* Make the image responsive */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 10px; /* Match the container's rounded corners */
-  margin-bottom: 20px; /* Space below the image */
+.sphere {
+  display: block;
 }
 
-/* Add any additional styles for the container, form, etc. as needed */
+/* Sign-In Form Box */
+.signin-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+}
+
+/* Form Header */
+.signin-container h2 {
+  text-align: center;
+  color: #3b5998;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  .signin-container {
+    width: 90%;
+    padding: 15px;
+  }
+
+  .signin-container h2 {
+    font-size: 1.5rem;
+  }
+}
+
+.input-container {
+  position: relative;
+  display: flex; /* Make container a flexbox */
+  align-items: center; /* Align items (icon and input) vertically */
+  margin-bottom: 20px;
+}
+
+.input-container i {
+  position: absolute;
+  left: 12px;
+  font-size:1.7 rem;
+  color: #666;
+ 
+}
+
+/* Adjust padding for inputs with icons */
+input[type="email"],
+input[type="password"] {
+  padding-left: 50px; /* Space for icons */
+  width: 100%;
+  padding: 12px 15px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  color: #333;
+  background-color: #f9f9f9;
+  box-sizing: border-box;
+}
+
+/* Focused Input Style */
+input:focus {
+  border-color: #3b5998;
+  outline: none;
+  box-shadow: 0 0 5px rgba(59, 89, 152, 0.5);
+}
+
+/* Submit Button Styling */
+button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #3b5998;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #4c70ba;
+}
+
+button[type="submit"]:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* Error Message */
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+/* Loading State for Button */
+button[disabled] {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+/* Link to the signup page or other links */
+.signin-container a {
+  display: block;
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #3b5998;
+   box-sizing: border-box;
+  text-decoration: none;
+}
+
+.signin-container a:hover {
+  text-decoration: underline;
+}

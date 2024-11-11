@@ -1,52 +1,48 @@
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: #333;
-    color: white;
-  }
-  
-  .nav-categories {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-  }
-  
-  .nav-categories li {
-    cursor: pointer;
-    padding: 10px;
-  }
-  
-  .nav-categories li:hover {
-    background-color: #555;
-  }
-  
-  .nav-actions {
-    display: flex;
-    align-items: center;
-  }
-  
-  .country-dropdown {
-    padding: 8px;
-    margin-right: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-  }
-  
-  .signin-btn,
-  .signup-btn {
-    padding: 8px 15px;
-    margin-left: 10px;
-    cursor: pointer;
-    background-color: #007bff;
-    color: white;
-    border: none;
-    border-radius: 5px;
-  }
-  
-  .signin-btn:hover,
-  .signup-btn:hover {
-    background-color: #0056b3;
-  }
-  
+  display: flex;
+  justify-content: flex-start; /* Align content to the left */
+  align-items: center;
+  background-color: #ff0000;
+  color: white;
+  padding: 5px 20px;
+  box-sizing: border-box;
+  top: 200px;
+  width:100%;
+  position:absolute;
+}
+
+.nav-categories {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-categories li {
+  cursor: pointer;
+  padding: 5px 10px;
+}
+
+.nav-categories li:hover {
+  background-color: #ca3030;
+}
+
+/* Adjust Actions on Right Side of Navbar */
+.nav-actions {
+  margin-left: auto; /* Move actions to the far right */
+  display: flex;
+  align-items: center;
+}
+/* Dropdown and Button Styling */
+.country-dropdown {
+  padding: 5px;
+  margin-right: 15px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Remove Gap Between Header and Navbar */
+.header + .navbar {
+  margin-top: 0;
+}

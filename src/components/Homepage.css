@@ -11,23 +11,90 @@
     text-align: center;
     margin-bottom: 30px;
     font-size: 3.5rem;
-    font-family: 'Playfair Display', serif;
-    color: #333333;
+    font-family: 'Poor Richard', serif;
+    color: #ff0000;
+    
 }
 
-/* Navbar */
+/* Search Form */
+.search-form {
+    display: flex; /* Align elements in a row */
+    justify-content: center; /* Center the form horizontally */
+    align-items: center; /* Align items vertically */
+    margin: 20px auto; /* Add margin for spacing */
+    margin-left:50px;
+    width: 80%; /* Adjust width */
+    max-width: 500px; /* Set maximum width */
+    border-radius: 25px; /* Rounded corners */
+    padding: 10px; /* Add padding */
+    background-color: #f1f1f1; /* Light background color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Search Input */
+.search-form input {
+    width: 80%; /* Make the input take up most of the space */
+    padding: 12px 15px; /* Add padding for input field */
+    font-size: 16px; /* Increase font size */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 25px; /* Rounded input field */
+    margin-right: 10px; /* Add space between input and button */
+    box-sizing: border-box; /* Include padding in width calculation */
+    outline: none; /* Remove outline */
+    transition: border 0.3s ease; /* Smooth border color transition */
+}
+
+/* Change border color on focus */
+.search-form input:focus {
+    border-color: #3b5998; /* Change border color when focused */
+    box-shadow: 0 0 5px rgba(59, 89, 152, 0.5); /* Add light shadow */
+}
+
+/* Search Button */
+.search-form button {
+    padding: 12px 20px; /* Add padding for button */
+    font-size: 16px; /* Match font size with input */
+    color: white; /* White text color */
+    background-color: #3b5998; /* Blue background */
+    border: none; /* Remove border */
+    border-radius: 25px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth background transition */
+}
+
+/* Change button color on hover */
+.search-form button:hover {
+    background-color: #4c70ba; /* Darken the button color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .search-form {
+        width: 90%; /* Make form wider on small screens */
+    }
+
+    .search-form input {
+        width: 70%; /* Adjust input width */
+    }
+
+    .search-form button {
+        width: 20%; /* Adjust button width */
+    }
+}
+
 .navbar {
     display: flex;
     justify-content: center;
     gap: 15px;
-    margin-bottom: 30px;
+    margin-top: 30px;
+    width:79.4%;
 }
 
 .nav-link {
     padding: 10px 20px;
     background-color: #ffffff;
-    border: 2px solid #007bff;
-    color: #007bff;
+    border: 2px solid #000000;
+    color: #000000;
     font-size: 1.1rem;
     border-radius: 8px;
     cursor: pointer;
@@ -35,7 +102,7 @@
 }
 
 .nav-link.active {
-    background-color: #007bff;
+    background-color: #bd2323;
     color: #ffffff;
 }
 
@@ -134,35 +201,99 @@
     font-size: 40px;
     color: inherit;
 }
-
-
-.dropdown-menu {
-    position: absolute;
-    top: 50px;
-    right: 0;
-    background-color: #ffffff;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-    padding: 10px;
-}
-
-.dropdown-menu button {
-    display: block;
-    width: 100%;
-    text-align: left;
-    padding: 10px;
-    background: none;
+/* Share Button */
+.share-button {
+    padding: 10px 20px;
+    background-color: #34a853;
+    color: #ffffff;
+   width:60%;
     border: none;
-    color: #333;
+    border-radius: 5px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top:8px;
+    margin-right: 8px; /* Adds space between share and save buttons */
 }
 
-.dropdown-menu button:hover {
-    background-color: #f0f0f0;
+.share-button:hover {
+    background-color: #2c8b47;
 }
 
+/* Save Button */
+.save-button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left:20px;
+    width:30%;
+    transition: background-color 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #b5adad;
+}
+
+/* Saved Article Link Style */
+.saved-article-link {
+    color: #ffffff; /* Make the link black */
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.saved-article-link:hover {
+    color: #007bff; /* Add hover color */
+}
+
+.source-dropdown-container {
+    display: flex; /* Align elements in a row */
+    justify-content: flex-start; /* Align dropdown to the left */
+    margin: 20px auto; /* Add margin for spacing */
+    width: 80%; /* Adjust width */
+    max-width: 400px; /* Set maximum width */
+    margin-left:70px;
+}
+
+/* Dropdown Style */
+.source-dropdown {
+    width: 100%; /* Make dropdown take full width */
+    padding: 12px 15px; /* Add padding for input field */
+    font-size: 16px; /* Increase font size */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 25px; /* Rounded corners */
+    background-color: #f9f9f9; /* Light background color */
+    color: #333; /* Dark text */
+    outline: none; /* Remove outline */
+    box-sizing: border-box; /* Include padding in width calculation */
+    transition: border 0.3s ease; /* Smooth border color transition */
+}
+
+/* Change border color on focus */
+.source-dropdown:focus {
+    border-color: #3b5998; /* Change border color when focused */
+    box-shadow: 0 0 5px rgba(59, 89, 152, 0.5); /* Add light shadow */
+}
+
+/* Option Style */
+.source-dropdown option {
+    padding: 10px; /* Add padding to each option */
+    background-color: #fff; /* Set background color for options */
+    color: #333; /* Text color for options */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .source-dropdown-container {
+        width: 90%; /* Make the container wider on small screens */
+    }
+
+    .source-dropdown {
+        font-size: 14px; /* Adjust font size for smaller screens */
+    }
+}
 /* Dark Mode */
 body.dark-mode {
     background-color: #121212;
@@ -172,8 +303,12 @@ body.dark-mode {
 body.dark-mode .header {
     color: #ffffff;
 }
+body.dark-mode .hamburger-icon {
+    color: #ffffff;
+}
 
-body.dark-mode .navbar, .search-form, .source-dropdown-container, .news-grid {
+
+body.dark-mode .navbar, .news-grid {
     background-color: #1e1e1e;
 }
 
@@ -203,55 +338,197 @@ body.dark-mode .dropdown-menu button:hover {
     background-color: #444;
 }
 
-/* Weather Section */
 .weather-section {
     background-color: #e3f2fd;
     border-radius: 15px;
-    padding: 25px;
-    margin: 25px 0;
+    padding: 15px; /* Reduced padding for a smaller form */
+    margin: 15px 0; /* Reduced margin for a smaller form */
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
     text-align: center;
-    width: 30%;
+    width: 20%; /* Reduced width */
 }
 
 .weather-section h2 {
-    font-size: 24px;
-    color: #007bff;
-    margin-bottom: 15px;
+    font-size: 18px; /* Reduced font size */
+    color: #31649a;
+    margin-bottom: 10px; /* Reduced margin */
 }
 
 .weather-section p {
-    font-size: 18px;
+    font-size: 14px; /* Reduced font size */
     color: #555;
-    margin: 8px 0;
+    margin: 5px 0; /* Reduced margin */
 }
 
 .weather-section p:last-child {
     font-weight: bold;
 }
 
-/* Language Selector */
-.language-selector {
-    margin: 20px 0;
-    display: flex;
-    align-items: center;
+/* Profile Dropdown Container */
+.profile-dropdown {
+    position: fixed; /* Fixed position to keep it in the same place on scroll */
+    top: 10px; /* Distance from the top */
+    right: 10px; /* Distance from the right */
+    z-index: 1000; /* Ensure it stays on top of other content */
 }
 
-.language-selector label {
-    margin-right: 10px;
-    font-size: 1rem;
-    color: #555;
+/* Profile Icon */
+.profile-dropdown span {
+    cursor: pointer; /* Pointer on hover */
+    font-size: 40px; /* Size of the profile icon */
+    color: #333; /* Icon color */
+    transition: color 0.3s ease;
+    z-index: 10; 
+    pointer-events: auto;/* Smooth transition for icon color */
 }
 
-.language-selector select {
-    padding: 8px;
-    font-size: 1rem;
-    border-radius: 5px;
+/* Change icon color on hover */
+.profile-dropdown span:hover {
+    color: #808a94; /* Change to blue when hovered */
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Position the menu below the icon */
+    right: 0; /* Align the dropdown to the right */
+    width: 500px; /* Set width of the dropdown */
+    background-color: #fff; /* White background */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow for the menu */
+    padding: 10px 0; /* Padding inside the dropdown */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+/* Dropdown Menu Buttons */
+.dropdown-menu button {
+    width: 100%; /* Make buttons take full width */
+    padding: 10px 15px; /* Padding inside buttons */
+    font-size: 16px; /* Font size of button text */
+    background-color: transparent; /* Transparent background */
+    color: #333; /* Button text color */
+    border: none; /* Remove default button border */
+    text-align: left; /* Align text to the left */
+    cursor: pointer; /* Pointer cursor */
+    transition: background-color 0.3s ease; /* Smooth transition for background */
+}
+
+/* Change button background on hover */
+.dropdown-menu button:hover {
+    background-color: #f0f0f0; /* Light background color on hover */
+}
+
+/* Horizontal Line Separator */
+.dropdown-menu hr {
+    margin: 10px 0; /* Add some space before and after the line */
+    border: 0; /* Remove default border */
+    border-top: 1px solid #ddd; /* Thin gray line */
+}
+
+/* Saved Articles Section */
+.dropdown-menu h4 {
+    margin: 10px 15px; /* Margin around the header */
+    font-size: 18px; /* Font size for the header */
+    color: #000000; /* Blue color for header */
+}
+
+/* List of Saved Articles */
+.dropdown-menu ul {
+    margin: 0; /* Remove default margin */
+    padding-left: 20px; /* Add padding to the left of list items */
+    list-style-type: none; /* Remove default bullet points */
+}
+
+/* Saved Articles List Items */
+.dropdown-menu li {
+    margin-bottom: 10px; /* Space between list items */
+}
+
+/* Links inside Saved Articles */
+.dropdown-menu a {
+    color: #000000; /* Blue color for the article links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 14px; /* Font size for the article titles */
+}
+
+/* Change link color on hover */
+.dropdown-menu a:hover {
+    text-decoration: underline; /* Underline the link on hover */
+}
+
+/* No saved articles message */
+.dropdown-menu p {
+    color: #777; /* Gray color for the 'No saved articles' text */
+    font-size: 14px; /* Font size for the message */
+    margin: 10px 15px; /* Margin around the message */
+}
+
+.tamil-news-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .tamil-news-item {
     border: 1px solid #ddd;
-    transition: border-color 0.3s ease;
-}
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  
+  .tamil-news-image {
+    width: 100%;
+    height: auto;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+  
+  .tamil-news-title {
+    font-size: 1rem;
+    margin-top: 10px;
+    color: #333;
+  }
+  .news-feed {
+    flex-grow: 1;
+  }
+  h5 {
+    font-size: 20px; /* Increase font size */
+    font-family: 'Roboto', sans-serif; /* Stylish font family */
+    font-weight: bold; /* Make it bold */
+    color: #ffffff; /* Dark gray color */
+    background: linear-gradient(45deg, #f06, #8e44ad); /* Gradient background */
+    padding: 10px 20px; /* Add padding around the text */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center; /* Center align the text */
+    text-transform: uppercase; /* Make text uppercase */
+    letter-spacing: 2px; /* Add spacing between letters */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    transition: all 0.3s ease-in-out; /* Smooth transition for hover effect */
+  }
+  
+  h5:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+    color: #fff; /* Change text color on hover */
+    background: #000000; /* Change background color on hover */
+  }
 
-.language-selector select:hover,
-.language-selector select:focus {
-    border-color: #007bff;
-}
+  /* Share button styling */
+.share-btn {
+    background-color: #25D366; /* WhatsApp Green */
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .share-btn:hover {
+    background-color: #128C7E; /* Darker WhatsApp Green */
+    transform: translateY(-2px);
+  }
+  

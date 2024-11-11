@@ -33,8 +33,7 @@ const NavbarHome = ({ onSearch, onCategoryChange }) => {
       </ul>
 
       <div className="nav-actions">
-        {/* Search bar specific to Homepage */}
-        <form className="search-form" onSubmit={handleSearchSubmit}>
+         <form className="search-form" onSubmit={handleSearchSubmit}>
           <input
             type="text"
             placeholder="Search latest news..."

@@ -10,7 +10,7 @@ const NewsGrid = ({ news }) => {
         <div key={article.url} className="news-item">
           <h2>{article.title}</h2>
           <p>{article.description}</p>
-          <p>Published: {formatTime(article.publishedAt)}</p> {/* Use the formatTime function here */}
+          <p>Published: {formatTime(article.publishedAt)}</p> 
           <img src={article.urlToImage} alt={article.title} />
           <a href={article.url} target="_blank" rel="noopener noreferrer">Read more</a>
         </div>
